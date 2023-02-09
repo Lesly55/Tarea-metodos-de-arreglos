@@ -1,0 +1,15 @@
+public class Estudiante {
+	
+	String nombre;
+	int ID;
+	
+	public Estudiante(String nombre,int ID){
+		this.nombre = nombre;
+		this.ID = ID;
+	}
+	
+	public String toString() {
+		return "Nombre: " + nombre + "    " + "ID: " + ID;
+	}
+
+}
