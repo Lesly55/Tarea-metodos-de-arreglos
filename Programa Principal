@@ -1,0 +1,180 @@
+public class programa {
+
+	public static void main(String[] args) {
+		
+		int[] numeros = new int[15];
+		
+		String[] nombres = new String[20];
+		
+		Estudiante estudiantes[] = new Estudiante[100];
+		
+		for(int i  = 0; i < numeros.length; i++) {
+			if(i == 10) {
+				numeros[i] = 5;
+				break;
+			}
+		}
+		
+		for(int i = 0; i< nombres.length; i++) {
+			if(i == 0) {
+
+				nombres[0] = "Francisco";
+				
+				break;
+			}
+		}
+		
+		Estudiante e = new Estudiante("Lesly", 177953);
+		
+		for(int i = 0; i < estudiantes.length; i++) {
+			if(i == 5) {
+				estudiantes[i] = e;
+			}
+		}
+		
+	}
+
+	
+	// Metodos para imprimir
+	public static void imprimirArregloInt(int[]arreglo) {
+		for(int i = 0; i < arreglo.length; i++) {
+			System.out.println(arreglo[i]);
+		}
+	}
+	
+	public static void imprimirArregloString(String[]arreglo) {
+		for(int i = 0; i <arreglo.length; i++) {
+			System.out.println(arreglo[i]);
+		}
+	}
+	
+	public static void imprimirArregloObjeto(Estudiante arreglo[]) {
+		for(int i = 0; i < arreglo.length; i++) {
+			System.out.println(arreglo[i]);
+		}
+	}
+	
+	// Metodos para buscar valores
+	
+	public static void buscarValorArregloInt(int[]arreglo, int c) {
+		int control = 0;
+		for(int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] == c) {
+				System.out.println("El valor se encontro en la posicion " + i);
+				break;
+			}
+			
+			else {
+				control++;
+				if(control == arreglo.length) {
+					System.out.println("No se encontro el valor en el arreglo");
+				}
+			}
+		}
+	}
+	
+	public static void buscarValorArregloString(String[]arreglo, String k) {
+		int control = 0;
+		for(int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] == k) {
+				System.out.println("El valor se encontro en la posicion " + i);
+				break;
+			}
+			
+			else {
+				control++;
+				if(control == arreglo.length) {
+					System.out.println("No se encontro el valor en el arreglo");
+				}
+			}
+		}
+	}
+	
+	public static void buscarValorArregloObjeto(Estudiante arreglo[], Estudiante e) {
+		int control = 0;
+		for(int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] == e) {
+				System.out.println("El valor se encontro en la posicion " + i);
+				break;
+			}
+			
+			else {
+				control++;
+				if(control == arreglo.length) {
+					System.out.println("No se encontro el valor en el arreglo");
+				}
+			}
+		}
+	}
+	
+	// Metodos para eliminar valores
+	
+	public static void eliminarValorArregloInt(int[]arreglo, int c) {
+		int control = 0;
+		for(int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] == c) {
+				for(int j = i + 1; j< arreglo.length;) {
+					arreglo[i] = arreglo[j];
+					i++;
+					if(j == arreglo.length-1) {
+						arreglo[j] = 0;
+						break;
+				}
+				break;
+			}
+		    }
+			else {
+				control++;
+				if(control == arreglo.length) {
+					System.out.println("No se encontro el valor en el arrelo");
+				}
+			}
+	    }
+	}
+	
+	public static void eliminarValorArregloString(String[]arreglo, String k) {
+		int control = 0;
+		for(int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] == k) {
+				for(int j = i + 1; j< arreglo.length;) {
+					arreglo[i] = arreglo[j];
+					i++;
+					if(j == arreglo.length-1) {
+						arreglo[j] = "";
+						break;
+				}
+				break;
+			}
+		    }
+			else {
+				control++;
+				if(control == arreglo.length) {
+					System.out.println("No se encontro el valor en el arrelo");
+				}
+			}
+	    }
+	}
+	
+	public static void eliminarValorArregloObjeto(Estudiante arreglo[], Estudiante e) {
+		int control = 0;
+		for(int i = 0; i < arreglo.length; i++) {
+			if(arreglo[i] == e) {
+				for(int j = i + 1; j< arreglo.length;) {
+					arreglo[i] = arreglo[j];
+					i++;
+					if(j == arreglo.length-1) {
+						arreglo[j] = new Estudiante ("", 0);
+						break;
+				}
+				break;
+			}
+		    }
+			else {
+				control++;
+				if(control == arreglo.length) {
+					System.out.println("No se encontro el valor en el arrelo");
+				}
+			}
+	    }
+	}
+}
